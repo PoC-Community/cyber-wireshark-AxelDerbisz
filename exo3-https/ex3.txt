@@ -1,0 +1,7 @@
+Pendant la négociation TLS, le client et le serveur s'accordent sur les clés de chiffrement.
+
+Une fois la session lancée, toutes les données de l'application sont chiffrées.
+
+Cela signifie que Wireshark  ne peut pas lire les noms d'utilisateur, les mots de passe ou les charges utiles API sans les clés de déchiffrement
+
+conclusion: Le contenu est chiffré avec TLS (HTTPS), donc Wireshark ne peut pas afficher les identifiants de connexion, seulement la poignée de main et les paquets chiffrés.
