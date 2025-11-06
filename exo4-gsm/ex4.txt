@@ -1,0 +1,13 @@
+dans wireshark on utilise le filtre gsmtap || gsm_sms
+
+on clique sur un paquet de type SMS_DELIVER
+
+dans notre cas on obtient:
+
+FROM → +33100000007
+
+TO → +33200000007
+
+TP-DCS = 0x08 : message encodé UCS-2
+
+décodé ça donne GSM is awesome !
