@@ -1,0 +1,3 @@
+L'utilisateur tente de se connecter à une application web locale (127.0.0.1:5000) via un point de terminaison API /signin.Il a utilisé les informations d'identification suivantes :nom d'utilisateur : Grootmot de passe : Je_sappelle_GrootLa requête est envoyée au format JSON
+
+Le server http à répondu OK (200) mais avec un message json (invalid credientials), login attempt failed
