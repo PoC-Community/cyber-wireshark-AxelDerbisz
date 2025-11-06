@@ -1,0 +1,16 @@
+Un rapport HID clavier typique a la forme 8 octets: [modifier][reserved][key1][key2][key3][key4][key5][key6]
+
+
+Dans un fichier PCAP de clavier USB, les frappes sont enregistrées sous forme de données HID (Human Interface Device) présentes dans les paquets USB. Ces données contiennent des codes d’usage (usage codes) qu’il faut interpréter à l’aide d’une table de correspondance pour retrouver les touches réelles.
+Filtrage des paquets clavier
+On commence par isoler les paquets liés au périphérique USB HID correspondant au clavier.
+
+Extraction des codes HID
+On récupère, pour chaque frappe, la valeur du champ Leftover Capture Data ou du champ de données HID.
+Chaque séquence correspond généralement à un appui suivi d’un relâchement (paquet vide).
+
+Application du mappage AZERTY
+Étant donné qu’il s’agit d’un clavier AZERTY, on utilise la table de correspondance adaptée pour traduire les codes HID en caractères, en tenant compte des touches de modification
+
+H → E → Y → (espace) → L → E → (espace) → R → O → C → K
+= HEY LE ROCK
