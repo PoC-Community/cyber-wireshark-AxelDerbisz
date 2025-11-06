@@ -1,0 +1,18 @@
+Pendant la session réseau, deux hôtes échangent des messages texte puis réalisent un transfert de fichier via une connexion chiffrée/TCP
+
+Séquence observée:
+
+Le client envoie la phrase courte give me the key il sollicite une clé.
+
+Le serveur répond par la chaîne securinetsXD. Cette valeur précède immédiatement la phase de transfert de fichier et agit comme indice / secret
+
+Le client répond : okey, listen on 4444 for the file  il prépare un écoute sur le port 4444 pour recevoir l’archive
+
+Les octets suivants contiennent l’entête typique d’une archive ZIP (PK...) avec une entrée nommée flag.txt
+
+On obtient donc une fois décompressé: c2VjdXJpbmV0c3s5NTRmNjcwY2IyOTFlYzI3NmIxYTlmZjg0NTNlYTYwMX0 en base64
+
+(7z x -psecurinetsXD archive.zip)
+
+décodé: securinets{954f670cb291ec276b1a9ff8453ea601}
+
