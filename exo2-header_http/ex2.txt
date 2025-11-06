@@ -1,0 +1,6 @@
+Sur wireshark avec le filtre http.authorization on peut voir une requete POST:
+
+avec une chaine auth: Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=
+une fois décodé ça nous donne:
+
+Credentials: username:password
